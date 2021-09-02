@@ -1,0 +1,10 @@
+{
+	"version": {
+		"default": "3.3",
+		"list": [{"name":"3.3"}, {"name":"3.4"}]
+	},
+	"lang": {
+		"default": "es",
+		"list": [{"name":"en"}, {"name":"es"}]
+	}
+}

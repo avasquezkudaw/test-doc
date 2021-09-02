@@ -1,0 +1,40 @@
+<header class="md-header" data-md-component="header" id="page-header" data-md-state="shadow">
+   <nav class="md-header-nav md-grid">
+      <div class="md-flex__cell md-flex__cell--shrink" for="__drawer">
+         <a href="{{ config.site_url | default(nav.homepage.url, true) | url }}" title="{{ config.site_name }}" class="md-header-nav__button md-logo">
+         {% if config.theme.logo.icon %}
+         <i class="md-icon">{{ config.theme.logo.icon }}</i>
+         {% else %}
+         <img src="{{ config.theme.logo | url }}" width="24" height="24">
+         {% endif %}
+         </a>
+      </div>
+      <div class="md-header-nav__title" data-md-component="header-title" data-md-state="">
+         <div class="md-header-nav__ellipsis">
+            {{ config.site_name }}
+         </div>
+      </div>
+      <div class="md-flex__ellipsis md-header__lang-select">
+         <div class="mb-tabs__dropdown lang-select">
+            <a class="md-tabs__link md-tabs__dropdown-link" href="#!" data-target="lang-select-dropdown">{{ config.extra.lang }}</a>
+            <ul id="lang-select-dropdown" class="mb-tabs__dropdown-content" tabindex="0">
+            </ul>
+         </div>
+      </div>
+      <div class="md-flex__ellipsis md-header__version-select">
+         <div class="mb-tabs__dropdown version-select">
+            <a class="md-tabs__link md-tabs__dropdown-link" href="#!" data-target="version-select-dropdown">{{ config.extra.current_version }}</a>
+            <ul id="version-select-dropdown" class="mb-tabs__dropdown-content" tabindex="0">
+            </ul>
+         </div>
+      </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+         {% if "search" in config["plugins"] %}
+         <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+         {% include "partials/search.html" %}
+         {% endif %}
+      </div>
+      </div>
+   </nav>
+</header>
