@@ -24,7 +24,7 @@ nav:
 # Configuration
 theme: 
   name: material # readthedocs material
-  #custom_dir: theme/material
+  #custom_dir: docs/theme/material
   language: en # en es
   logo: assets/images/raptor.png
   favicon: assets/images/favicon.ico
@@ -68,8 +68,3 @@ markdown_extensions:
 # Plugins
 plugins:
     - search
-#    - pdf-export:
-#        verbose: false
-#        combined: true
-#        media_type: print
-#        theme_handler_path: pdf/cinder.py
